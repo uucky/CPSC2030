@@ -22,9 +22,12 @@ $resulttype = $conn->query($sqltype);
     <body>
         <?php
         if ($result->num_rows > 0) {
-            echo "<table><tr><th>ID</th><th>Name</th><th>Type1</th><th>Type2</th></tr>";
-
-        // output data of each row
+            echo "<table><tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Type1</th>
+            <th>Type2</th></tr>";
+            // output data of each row
             while ($row = $result->fetch_assoc()) {
                 echo '<tr><td><a href="">' . $row["id"]. "</a></td>
 		<td>" . $row["name"]. "</td>

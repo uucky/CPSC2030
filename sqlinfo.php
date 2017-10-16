@@ -8,7 +8,7 @@ echo $connInfo.servername;
 echo $connInfo.username;
 
  */
-function getSqlInfo(){
+function getSqlInfo() {
     $servername = "localhost";
     $username = "TonyHawk";
     $password = "SkateBoard";
@@ -29,10 +29,10 @@ function getSqlInfo(){
 // $result = $conn->query("call getWeak('Ivysaur')");
 // clearConnection($conn);
 
-function clearConnection($mysql){
-    while($mysql->more_results()){
-       $mysql->next_result();
-       $mysql->use_result();
+function clearConnection($mysql) {
+    while ($mysql->more_results()) {
+        $mysql->next_result();
+        $mysql->use_result();
     }
 }
 ?>
