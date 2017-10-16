@@ -6,6 +6,9 @@ class PokedexData {
     public function connect()
     {
         $this->connection = new mysqli("localhost", "TonyHawk", "SkateBoard", "pokedex");
+        if ($this->connection->connect_error) {
+            die("Connection failed: " . $this->connection->connect_error);
+        } 
     }
 
     public function getAllPokedexes()
