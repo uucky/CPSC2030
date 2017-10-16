@@ -1,7 +1,7 @@
 <?php
 echo "importing connection...";
-require 'sqlinfo.php';
 require 'connection.php';
+require 'sqlinfo.php';
 echo "Include DONE";
 $sql = "SELECT Pokemon.id,Pokemon.name,type_id.type,type_id.type
 FROM Pokemon
@@ -29,7 +29,9 @@ $resulttype = $conn->query($sqltype);
             <th>Type2</th></tr>";
             // output data of each row
             while ($row = $result->fetch_assoc()) {
-                echo '<tr><td><a href="">' . $row["id"]. "</a></td>
+                echo '<tr><td>
+                <a href="detail.php?pokemon.id=$row["id"]>' . $row["id"]. "</a>
+                </td>
 		<td>" . $row["name"]. "</td>
 		<td>" . $row["type"]. "</td>
 		<td>" . $row["type"]. "</td><tr>";
