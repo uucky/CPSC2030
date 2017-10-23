@@ -21,6 +21,7 @@ $pokedexes = $data->getAllPokedexes();
     </thead>
     <tbody>
         <!-- Use a while loop to make a table row for every DB row -->
+        <?php echo '<pre>'; print_r($pokedexes->fetch_all()); echo '</pre>' ?>
         <?php while( $row = $pokedexes->fetch_assoc()) : ?>
         <tr>
             <td>

@@ -1,9 +1,33 @@
 CREATE DATABASE pokedex;
+create table type_id (
+  id int, PRIMARY KEY (id),
+  type varchar(12)
+);
+
+INSERT INTO type_id VALUES
+(1,"NORMAL"),
+(2,"FIGHT"),
+(3,"FLYING"),
+(4,"POISON"),
+(5,"GROUND"),
+(6,"ROCK"),
+(7,"BUG"),
+(8,"GHOST"),
+(9,"STEEl"),
+(10,"FIRE"),
+(11,"WATER"),
+(12,"GRASS"),
+(13,"ELECTR"),
+(14,"PSYCHC"),
+(15,"ICE"),
+(16,"DRAGON"),
+(17,"FAIRY");
+
 CREATE TABLE pokemon (
-    id int, 
+    id int NOT NULL, PRIMARY KEY (id),
     name varchar(255), 
-    type1 int,
-    type2 int,
+    type1 int, FOREIGN KEY (type1) REFERENCES type_id(id),
+    type2 int, FOREIGN KEY (type2) REFERENCES type_id(id),
     hp int, 
     atk int,  
     def int, 
@@ -12,6 +36,7 @@ CREATE TABLE pokemon (
     spd int, 
     bst int
 );
+
 INSERT INTO pokemon VALUES(1,"Bulbasaur",12,4,45,49,49,65,65,45,318),
 (2,"Ivysaur",12,4,60,62,63,80,80,60,405),
 (3,"Venusaur",12,4,80,82,83,100,100,80,525),
@@ -169,30 +194,6 @@ create table effectiveness (
   def_type int,
   multiplier double
 );
-
-create table type_id (
-  id int,
-  type varchar(12)
-);
-
-INSERT INTO type_id VALUES
-(1,"NORMAL"),
-(2,"FIGHT"),
-(3,"FLYING"),
-(4,"POISON"),
-(5,"GROUND"),
-(6,"ROCK"),
-(7,"BUG"),
-(8,"GHOST"),
-(9,"STEEl"),
-(10,"FIRE"),
-(11,"WATER"),
-(12,"GRASS"),
-(13,"ELECTR"),
-(14,"PSYCHC"),
-(15,"ICE"),
-(16,"DRAGON"),
-(17,"FAIRY");
 
 INSERT INTO effectiveness VALUES
 (1,1,1),

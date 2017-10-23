@@ -33,21 +33,3 @@ class PokedexData {
     }
 }
 ?>
-<?php
-class Pokemon_table {
-    protected $connection = null;
-    
-    public function pokemon_table(){
-    echo "pokemon_table.twig loading!!!";
-    // require 'pokedex.php';
-    
-    $data = new PokedexData();
-    $data->connect();
-    // init connection
-    
-    $pokedexes = $data->getAllPokedexes();
-    // call defined public function
-    echo "pokemon_table.twig loaded!!!!";
-    }
-}
-?>

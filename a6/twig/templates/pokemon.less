@@ -1,0 +1,38 @@
+@font-face {
+    {{font_face}}
+}
+//need comma after font name
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: {{theme_font}} Arial, sans-serif;
+    background: {{body_background}};
+}
+
+// h1 {
+//     font-weight: bold;
+//     font-size: 3em;
+//     color: {{h1_text_color}};
+//     text-shadow: -1px 0 {{h1_shadow_color}}, 0 1px {{h1_shadow_color}}, 1px 0 {{h1_shadow_color}}, 0 -1px {{h1_shadow_color}};
+// }
+
+div.header {
+    color: {{header_color}};
+    font-family: {{header_font}} Verdana, sans-serif;
+    font-size: {{header_font_size}};
+    background-color: {{header_background_color}};
+}
+
+table {
+    margin: 0 auto;
+    background: {{table_background}};
+    td {
+        padding: 0.2em 0.5em;
+    }
+}
+
+div.footer {
+    height: {{footer_height}};
+    background: {{footer_background}};
+}

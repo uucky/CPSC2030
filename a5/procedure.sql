@@ -2,7 +2,7 @@ DELIMITER $$
 CREATE PROCEDURE `getAllDex`()
     NO SQL
 SELECT
-(SELECT type_id.type FROM type_id WHERE id = type1) AS typename1, (SELECT type_id.type FROM type_id WHERE id = type2) AS typename2, Pokemon.id, Pokemon.name FROM Pokemon$$
+Pokemon.id, Pokemon.name, (SELECT type_id.type FROM type_id WHERE id = type1) AS typename1, (SELECT type_id.type FROM type_id WHERE id = type2) AS typename2 FROM Pokemon$$
 DELIMITER ;
 
 DELIMITER $$
