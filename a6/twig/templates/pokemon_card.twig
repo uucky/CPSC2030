@@ -1,2 +1,20 @@
 <!-- Pokemon card: Create a twig for your Pokémon card
 Should able to accept sufficient parameters to recreate the Pokémon card -->
+<!-- For table border -->
+
+{% for poke in pokes %}
+<tr>
+    <td><a href="card.php?pokemon_id={{ poke[ "id" ] }}">{{poke["id"]}}</a></td>
+    {# <td>{{ poke[ "id"] }}</td> #}
+    <td>{{ poke[ 'name'] }}</td>
+    <td>{{ poke[ 'typename1'] }}</td>
+    <td>{{ poke[ 'typename2'] }}</td>
+    <td>{{ poke[ 'HP'] }}</td>
+    <td>{{ poke[ 'ATK'] }}</td>
+    <td>{{ poke[ 'DEF'] }}</td>
+    <td>{{ poke[ 'SAT'] }}</td>
+    <td>{{ poke[ 'SDF'] }}</td>
+    <td>{{ poke[ 'SPD'] }}</td>
+    <td>{{ poke[ 'BST'] }}</td>
+</tr>
+{% endfor %}

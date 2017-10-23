@@ -1,36 +1,43 @@
 <!doctype html>
-
+<!-- TODO:
+ GET POST search
+ link to single card
+ -->
 <head>
     <title>Pokedex - Gen 1</title>
     <link rel="stylesheet/less" type=text/css href="less.php">
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js"></script>
 </head>
 
+<?php 
+    include 'fragments/load_twig.php'
+?>
+
 <body>
-    <?php 
-    require_once "./vendor/autoload.php";
-    require 'pokedex.php';
-    //get templates from files,
-    $loader = new Twig_Loader_Filesystem('./templates');
 
-    //Creates enviroment
-    $twig = new Twig_Environment($loader);
-
-    $template = $twig->load('header.twig');
-    echo $template->render(array('title' => 'Pokedex'));
-    
-    $data = new PokedexData();
-    $data->connect();
-    // init connection
-    $pokedexes = $data->getAllPokedexes();
-    // call defined public function
-
-    $template = $twig->load('pokemon_table.twig');
-    echo $template->render(array('border' => 10, 'pokes' => $pokedexes));
-
-    $template = $twig->load('footer.twig');
-    echo $template->render(array('copyrightNotice' => 'CPSC 2030','copyrightDate' => '2017'));
+    <?php
+        include 'fragments/header.php';
+        include 'fragments/menubar.php';
     ?>
+
+    <div class="container">
+        <!-- pokemon table -->
+        <?php
+        $data = new PokedexData();
+        $data->connect();
+        // init connection
+        $pokedexes = $data->getAllPokedexes();
+        // call defined public function
+
+        $template = $twig->load('pokemon_table.twig');
+        echo $template->render(array('border' => 10, 'pokes' => $pokedexes));
+        ?>
+    </div>
+
+    <?php
+        include 'fragments/footer.php';
+    ?>
+
 </body>
 
 <!-- references:

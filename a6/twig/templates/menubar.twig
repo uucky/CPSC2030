@@ -14,7 +14,12 @@ on the Pokémon Card page the menu should contain
 - A link to the Pokémon home page -->
 <div class=menubar>
     <ul>
-        <li>Pokedex</li>
-        <li>My Top 5 Pokemon</li>
+        {% for link in menu %}
+          <li><a href="{{link["menuLink"]}}">{{link["menuItem"]}}</a></li>
+        {% endfor %}
+        {# <li>More>> #}
+        {# <form action="{{searchAction}}" method="get"> #}
+        {# <input type="text" name="keywordinput"><input type="submit" value="Search"> #}
+        {# </li> #}
     </ul>
 </div>

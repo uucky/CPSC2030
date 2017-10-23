@@ -8,16 +8,20 @@ You will need the fetch_all method on the sql result object -->
         <tr>
             <th>ID</th>
             <th>Name</th>
-            <th>Type1</th>
-            <th>Type2</th>
+            <th>Type 1</th>
+            <th>Type 2</th>
         </tr>
     </thead>
     <tbody>
         {% for poke in pokes %}
-        <tr>
-            {% for item in poke %}
+            <tr>
+            <td><a href="card.php?pokemon_id={{ poke[ "id" ] }}">{{poke["id"]}}</a></td>
+            <td>{{poke["name"]}}</td>
+            <td>{{poke["typename1"]}}</td>
+            <td>{{poke["typename2"]}}</td>
+            {# {% for item in poke %}
                 <td>{{ item }}</td>
-            {% endfor %}
+            {% endfor %} #}
         </tr>
         {% endfor %}
     </tbody>

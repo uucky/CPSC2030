@@ -10,16 +10,15 @@
         'body_background' => '#7CCAF8',
         'font_face' => 'font-family: pokemon_gb; src: url(res/pokemon_gb.ttf);',
         'theme_font' => 'pokemon_gb,',
-        // 'h1_text_color' => 'red',
-        // 'h1_shadow_color' => 'black',
-        'header_color' => 'red',
-        // 'header_font' => 'Arial,',
+        
+        'header_color' => 'rgba(0, 0, 0, 0.7)',
+        'header_font' => 'Arial,',
         'header_font_size' => '3em',
-        'header_background_color' => 'pink',
+        'header_background_color' => 'rgba(0, 0, 0, 0.2)',
 
         'table_background' => 'rgba(255, 255, 255, 0.6)',
 
-        'footer_height' => '400px',
+        'footer_height' => '480px',
         'footer_background' => 'url(res/gen1bg.png)'
     ));
 ?>
