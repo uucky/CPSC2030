@@ -1,0 +1,45 @@
+-- CREATE DATABASE ds9;
+create table ds9data (
+  issueId int,
+  name text
+);
+INSERT INTO ds9data VALUES (1,'U.S.S. Enterprise NCC-1701-D');
+INSERT INTO ds9data VALUES (2,'U.S.S. Enterprise NCC-1701 TMP');
+INSERT INTO ds9data VALUES (3,'Klingon Bird-of-Prey');
+INSERT INTO ds9data VALUES (4,'Enterprise NX-01');
+INSERT INTO ds9data VALUES (5,'Romulan Warbird');
+INSERT INTO ds9data VALUES (6,'U.S.S. Voyager NCC-74656');
+INSERT INTO ds9data VALUES (7,'Klingon K''Tinga-class battlecruiser');
+INSERT INTO ds9data VALUES (8,'U.S.S. Excelsior NCC-2000');
+INSERT INTO ds9data VALUES (9,'U.S.S. Defiant NX-74205');
+INSERT INTO ds9data VALUES (10,'Borg Sphere');
+INSERT INTO ds9data VALUES (11,'U.S.S. Reliant (Miranda class)');
+INSERT INTO ds9data VALUES (12,'Akira class');
+INSERT INTO ds9data VALUES (13,'Jem''hadar cruiser');
+INSERT INTO ds9data VALUES (14,'Cardassian Galor class');
+INSERT INTO ds9data VALUES (15,'U.S.S. Equinox NCC-72381');
+INSERT INTO ds9data VALUES (16,'Ferengi Marauder');
+INSERT INTO ds9data VALUES (17,'Dauntless');
+INSERT INTO ds9data VALUES (18,'Bajoran Solar Sailor');
+INSERT INTO ds9data VALUES (19,'U.S.S. Stargazer NCC-2893');
+INSERT INTO ds9data VALUES (20,'Klingon V''orcha class');
+INSERT INTO ds9data VALUES (21,'U.S.S. Enterprise NCC-1701-E');
+INSERT INTO ds9data VALUES (22,'Krenim Temporal Weapon Ship');
+INSERT INTO ds9data VALUES (23,'Nebula class');
+INSERT INTO ds9data VALUES (24,'Xindi insectoid ship');
+INSERT INTO ds9data VALUES (25,'U.S.S. Prometheus');
+INSERT INTO ds9data VALUES (26,'Tholian ship');
+INSERT INTO ds9data VALUES (27,'Romulan Bird-of-Prey');
+INSERT INTO ds9data VALUES (28,'Maquis Fighter');
+INSERT INTO ds9data VALUES (29,'Jem''hadar fighter');
+INSERT INTO ds9data VALUES (30,'Nausicaan fighter');
+INSERT INTO ds9data VALUES (31,'The Valdore');
+INSERT INTO ds9data VALUES (32,'Runabout');
+INSERT INTO ds9data VALUES (33,'Hideki class');
+INSERT INTO ds9data VALUES (34,'Surok class');
+INSERT INTO ds9data VALUES (35,'Klingon Bird of Prey 2152');
+INSERT INTO ds9data VALUES (36,'Oberth Class');
+INSERT INTO ds9data VALUES (37,'Andorian Cruiser');
+INSERT INTO ds9data VALUES (38,'Delta Flyer');
+INSERT INTO ds9data VALUES (39,'Romulan Drone');
+INSERT INTO ds9data VALUES (40,'Enterprise NCC-1701-B');

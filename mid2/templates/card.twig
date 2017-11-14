@@ -1,0 +1,6 @@
+{% for thing in things %}
+<h2>{{thing["title"]}}</h2>
+<p><b>Airdate:</b> {{thing["airdate"]}} <b>Season:</b> {{thing["season"]}} <b>Episode:</b> {{thing["episode"]}}</p>
+<p><b>Stardate:</b> {{thing["stardate"]}}</p>
+<p><b>Summary:</b>{{thing["summary"]}}</p>
+{% endfor %}

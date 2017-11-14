@@ -1,0 +1,25 @@
+UPDATE 2017-10-30
+CURRENT TODO:
+CSS change current-menu-item color when change pages SEE https://stackoverflow.com/questions/11418977/parallelogram-navigation-background-with-css
+JS hamburger button
+
+DONE:
+1. SQL setup scripts
+    setup the necessary database
+    tables
+    and insert any testing data
+2. Contains at least 6 pages not related to the logon
+3. At least 2 Twig templates for pages
+4. A Small PHP library to generate common components of page: fragments dir
+5. Each page contains navigation to the whole site and a footer
+6. Use LESS style sheets
+
+WORKING:e
+7. The page must be responsive, that is it must look good at various resolutions 
+8. Contains a logon system, using SQL as a back end
+11. Contains at least 1 page which using AJAX that pulls data from a SQL back end
+
+
+TODO:
+9. Use jQuery to implement at least 2 non-trivial features
+10. Contain at least 1 jQuery animation: http://webdesignerwall.com/tutorials/animated-scroll-to-top

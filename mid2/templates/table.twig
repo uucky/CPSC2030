@@ -1,0 +1,16 @@
+<!-- Pokemon table: Create a twig for your Pokémon table
+Should accept the Pokedex table as a parameter
+You will need the fetch_all method on the sql result object -->
+
+<div class="table"border="{{border}}">
+<!-- For table border -->
+        {# <td><a href="card.php?pokemon_id={{ poke[ "id" ] }}">{{poke["id"]}}</a></td> #}
+        {# <div class="row"> #}
+        {% for thing in things %}
+            <div class="td"><a href="">{{thing["title"]}}</a><br>Stardate: {{thing["stardate"]}}<br>Season: {{thing["season"]}}<br>Episode: {{thing["episode"]}}</div>
+            {# {% for thing in thing %}
+                <td>{{ item }}</td>
+            {% endfor %} #}
+        {% endfor %}
+        {# </div> #}
+</div>
