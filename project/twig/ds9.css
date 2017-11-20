@@ -4,7 +4,9 @@ body {
   margin: 0 auto;
   color: white;
   font-family: "Avenir", "futura lt light", Helvetica, Arial, sans-serif;
-  background-image: url(res/flying-through-space.gif);
+  background-image: url(res/3.jpg);
+  background-size: cover;
+  background-attachment: fixed;
 }
 .back-to-top {
   position: fixed;
@@ -18,29 +20,18 @@ body {
 }
 .back-to-top a:hover {
   color: black;
-  text-shadow: 0rem -1rem 0rem orange, 0rem -0.5rem 0rem gray;
+  text-shadow: 0rem -1rem 0rem #ffcc00, 0rem -0.5rem 0rem gray;
 }
 .back-to-top a:active {
   color: black;
-  text-shadow: 0rem -0.8rem 0rem orange, 0rem -0.6rem 0rem rgba(128, 128, 128, 0.7);
-}
-.fullscreen-video-bg {
-  z-index: -100;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: auto;
-  height: auto;
-  min-width: 100%;
-  min-height: 100%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  text-shadow: 0rem -0.8rem 0rem #ffcc00, 0rem -0.6rem 0rem rgba(128, 128, 128, 0.7);
 }
 a {
   text-decoration: none;
-  color: orange;
+  color: #ffcc00;
+}
+img {
+  width: 100%;
 }
 .header {
   background-color: #17222c;
@@ -56,7 +47,6 @@ h1 {
   /*    line-height: 48px;*/
   /*    text-shadow: -4px 5px 0 rgba(224,147,31,0.5);*/
   font-family: FederationDS9Title, Eurpstile, Verdana, sans-serif;
-  color: #fc0;
 }
 .menubar ul {
   margin: 0;
@@ -82,7 +72,7 @@ h1 {
   -webkit-transform: skew(-10deg);
 }
 .menubar ul li a:hover {
-  color: #fc0;
+  color: #ffcc00;
   background-color: #2a3e50;
   margin-top: -8px;
 }
@@ -114,7 +104,7 @@ h1 {
   max-width: 768px;
 }
 fieldset {
-  border: 2px orange solid;
+  border: 2px #ffcc00 solid;
   border-radius: 5px;
   box-sizing: border-box;
 }

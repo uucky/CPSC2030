@@ -1,4 +1,4 @@
--- CREATE DATABASE ds9;
+-- CREATE DATABASE ds9db;
 create table ds9data (
   issueId int,
   name text

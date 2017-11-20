@@ -13,7 +13,7 @@ class fetchData {
 
     public function connect()
     {
-        $this->connection = new mysqli("localhost", "foo", NULL, "ds9");
+        $this->connection = new mysqli("localhost", "foo", NULL, "ds9db");
         if ($this->connection->connect_error) {
             die("Connection failed: " . $this->connection->connect_error);
         }
