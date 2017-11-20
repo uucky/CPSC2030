@@ -2,26 +2,17 @@
 Should accept the Pokedex table as a parameter
 You will need the fetch_all method on the sql result object -->
 
-<table border="{{border}}">
-    <thead>
-        <tr>
-            <th>Issue #</th>
-            <th>Name</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
+<section class="grid-container">
         {% for item in items %}
-            <tr>
+        <div>
             {# <td><a href="card.php?pokemon_id={{ poke[ "id" ] }}">{{poke["id"]}}</a></td> #}
-            <td>{{item["issueId"]}}</td>
-            <td>{{item["name"]}}</td>
+            <div>{{item["issueId"]}}</div>
+            <div>{{item["name"]}}</div>
             {# <td>{{item["issueId"]}} #}
-            <td><img src="res/ships/{{item["issueId"]}}.jpg" alt="{{item["issueId"]}}"></td>
+            <div><img src="res/ships/{{item["issueId"]}}.jpg" alt="{{item["issueId"]}}"></div>
             {# {% for item in poke %}
                 <td>{{ item }}</td>
             {% endfor %} #}
-        </tr>
+        </div>
         {% endfor %}
-    </tbody>
-</table>
+</section>
