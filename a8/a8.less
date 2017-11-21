@@ -1,0 +1,48 @@
+// transform to do the rotation
+// move the transform origin, so things rotate as expected
+// Create a fake CSS property that will be used in jQuery(this is not strictly necessary)
+//  Your editor will really hate this.
+@color: green;
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: lightblue;
+    height: 200px;
+}
+
+p {
+    margin-top: 50px;
+}
+
+nav * {
+    position: fixed;
+    width: 200px;
+}
+
+.item5 {
+    background: @color;
+    color: white;
+}
+.item4 {
+    background: lighten(@color, 10%); 
+    color: white;    
+}
+.item3 {
+    background: lighten(@color, 20%);    
+    color: white;    
+}
+.item2 {
+    background: lighten(@color, 30%);    
+}
+.item1 {
+    background: lighten(@color, 40%);    
+}
+
+.rotater {
+    transition: all 150ms ease;    
+    transform-origin: left;
+    transform: rotate(20deg);
+}
+

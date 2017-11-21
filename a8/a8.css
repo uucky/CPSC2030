@@ -1,0 +1,37 @@
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: lightblue;
+  height: 200px;
+}
+p {
+  margin-top: 50px;
+}
+nav * {
+  position: fixed;
+  width: 200px;
+}
+.item5 {
+  background: green;
+  color: white;
+}
+.item4 {
+  background: #00b300;
+  color: white;
+}
+.item3 {
+  background: #00e600;
+  color: white;
+}
+.item2 {
+  background: #1aff1a;
+}
+.item1 {
+  background: #4dff4d;
+}
+.rotater {
+  transition: all 150ms ease;
+  transform-origin: left;
+  transform: rotate(20deg);
+}

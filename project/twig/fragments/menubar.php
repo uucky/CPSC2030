@@ -3,10 +3,10 @@
    $template = $twig->load('menubar.twig');
    echo $template->render(array("menu"=>array(
         array('menuItem' => 'Service', 'menuLink' => 'index.php'),
-        array('menuItem' => 'Visiting DS9', 'menuLink' => 'visiting.php'),
         array('menuItem' => 'Location' , 'menuLink' => 'location.php'),
         array('menuItem' => 'Store' , 'menuLink' => 'store.php'),
-        array('menuItem' => 'Contact', 'menuLink' => "contact.php"))));
+        array('menuItem' => 'Order', 'menuLink' => 'Order.php'),
+        array('menuItem' => 'About', 'menuLink' => "about.php"))));
 //TODO: How to render 2 things?
 
     // $keyword = $_GET['keyword'];

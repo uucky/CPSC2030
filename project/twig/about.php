@@ -19,7 +19,11 @@ include 'fragments/load_twig.php'
     ?>
     <div class="container">
         <h2>About</h2>
-        <div class=
+        <div class="about">
+        <p>Developer: Xiaoxu Li</p>
+        <p>Email: xli77@langara.bc.ca</p>
+
+        </div>
         
     </div>
     <?php
