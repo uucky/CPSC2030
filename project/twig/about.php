@@ -18,7 +18,8 @@ include 'fragments/load_twig.php'
         include 'fragments/back-to-top.php';        
     ?>
     <div class="container">
-        <h2>Visiting</h2>
+        <h2>About</h2>
+        <div class=
         
     </div>
     <?php
