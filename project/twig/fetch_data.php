@@ -22,7 +22,7 @@ class fetchData {
     public function getAllItems()
     // for index.php
     {
-        $query = $this->connection->query("SELECT * FROM `ds9data`");
+        $query = $this->connection->query("SELECT * FROM `merchandise`");
         // sub-queries
         // see https://stackoverflow.com/questions/3201359/joining-the-same-table-twice-on-different-columns
         clearConnection($this->connection);        

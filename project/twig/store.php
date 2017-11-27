@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <meta charset="UTF-8"> 
+    <meta charset="UTF-8">
     <link rel="stylesheet/less" type=text/css href="ds9.less">
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js"></script>
     <title>Space Flight</title>
@@ -18,12 +18,17 @@ include 'fragments/load_twig.php'
         Your browser does not support the video tag.
         </video>
     </div> -->
-    <?php
-        include 'fragments/header.php';
-        include 'fragments/menubar.php';
-        include 'fragments/back-to-top.php';
-        include 'fragments/logon.php';
-    ?>
+    <div class="top">
+        <?php include 'fragments/header.php'; ?>
+        <?php include 'fragments/menubar.php'; ?>
+    </div>
+
+    <?php include 'fragments/back-to-top.php'; ?>
+    <div class="promo">
+        <img class="promo-pic" src="res/promo.jpg" alt="promo">
+        <div class="promo-text">NEW ARRIVAL</div>
+    </div>
+
     <div class="container">
         <?php
         require 'fetch_data.php';
@@ -38,7 +43,6 @@ include 'fragments/load_twig.php'
         // clearConnection();
         // echo '<pre>'; print_r($allItems->fetch_all()); echo '</pre>'
         ?>
-
     </div>
     <?php
         include 'fragments/footer.php';

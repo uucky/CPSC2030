@@ -6,7 +6,9 @@
         array('menuItem' => 'Location' , 'menuLink' => 'location.php'),
         array('menuItem' => 'Store' , 'menuLink' => 'store.php'),
         array('menuItem' => 'Order', 'menuLink' => 'Order.php'),
-        array('menuItem' => 'About', 'menuLink' => "about.php"))));
+        array('menuItem' => 'About', 'menuLink' => "about.php"),
+        array('menuItem' => 'Login', 'menuLink' => "login.php"),
+    )));
 //TODO: How to render 2 things?
 
     // $keyword = $_GET['keyword'];

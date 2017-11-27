@@ -4,12 +4,13 @@ You will need the fetch_all method on the sql result object -->
 
 <section class="grid-container">
         {% for item in items %}
-        <div>
+        <div class="box">
             {# <td><a href="card.php?pokemon_id={{ poke[ "id" ] }}">{{poke["id"]}}</a></td> #}
-            <div>{{item["issueId"]}}</div>
-            <div>{{item["name"]}}</div>
+            <div class="issueId">ISSUE {{item["issueId"]}}</div>
+            <div class="itemName">{{item["name"]}}</div>
             {# <td>{{item["issueId"]}} #}
             <div><img src="res/ships/{{item["issueId"]}}.jpg" alt="{{item["issueId"]}}"></div>
+            <div class="price">${{item["price"]}} Credits</div>
             {# {% for item in poke %}
                 <td>{{ item }}</td>
             {% endfor %} #}

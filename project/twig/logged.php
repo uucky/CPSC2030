@@ -18,8 +18,8 @@ include 'fragments/load_twig.php'
         include 'fragments/back-to-top.php';        
     ?>
     <div class="container">
-        <h2>Location</h2>
-        <img src="res/map.png" alt="map">
+        <h2>Logged</h2>
+        
     </div>
     <?php
         include 'fragments/footer.php';

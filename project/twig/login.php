@@ -18,8 +18,13 @@ include 'fragments/load_twig.php'
         include 'fragments/back-to-top.php';        
     ?>
     <div class="container">
-        <h2>Location</h2>
-        <img src="res/map.png" alt="map">
+        <h2>Login</h2>
+        <form method="POST" action="store.php">
+            username:<input type="text" name="username"><br>
+            password:<input type="password" name="password"><br>
+            <input type="submit" value="login">
+        </form>
+        <!-- the session id is {{session_id}} -->
     </div>
     <?php
         include 'fragments/footer.php';
