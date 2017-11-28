@@ -1,53 +1,60 @@
 <!DOCTYPE html>
+
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-   <link rel="stylesheet/less" type=text/css href="ds9.less">
-   <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js"></script>
-   <title>Space Flight</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <link rel="stylesheet/less" type=text/css href="ds9.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js"></script>
+    <title>Space Flight</title>
 </head>
 <?php 
    include 'fragments/load_twig.php'
    ?>
+
 <body>
-   <?php
+    <?php
       include 'fragments/header.php';
       include 'fragments/menubar.php';
       include 'fragments/back-to-top.php';      
       ?>
-   <div class="container">
-      <h2>Our services</h2>
-      <p>Space Flight is the largest company provides fixed-base oporation service for space fleet, founded in 2346, in Earth's Galaxy. </p>
-      <p>We are granted the right by the starport sponsor to operate on an starport, providing starnautical services such as bussard ramscoop fueling, storaging, hangaring, tie-down and parking, starship rental, starship maintenance, fleet instruction, etc. </p>
-      <img src="res/port2.jpg" alt="starport"> 
-      <!-- https://kidhds.deviantart.com/art/space-426724859 -->
-      <p>"Flight long and prosper." Choose Space Flight, you are now free to move about the universe. </p>
-      <div class="service">
-         <div class="service-left">
-            <h3 >Ground Service</h3>
-            <ul>
-               <li>Executive passenger lounge</li>
-               <li>Conference room</li>
-               <li>Pilot lounge with computer stations</li>
-               <li>Complimentary WIFI</li>
-               <li>Weather and flight planning facilities</li>
-               <li>Courtesy shuttle to terminal and tunnel</li>
-            </ul>
-         </div>
-         <div class="service-right">
-            <h3>Spacecraft Services</h3>
-            <ul>
-               <li>Refueling services</li>
-               <li>Baggage handling</li>
-               <li>Rental of secure hangar and ramp</li>
-               <li>De-icing</li>
-               <li>Coffee, ice, and onboard catering available</li>
-               <li>Maintenance services</li>
-            </ul>
-         </div>
-      </div>
-   </div>
-   <?php
+        <img src="res/port2.jpg" alt="starport">
+        <!-- https://kidhds.deviantart.com/art/space-426724859 -->
+        <div class="container">
+
+            <h2>Our services</h2>
+            <p>Space Flight is the largest company provides fixed-base oporation service for space fleet, founded in 2346, in
+                Earth's Galaxy. </p>
+            <p>We are granted the right by the starport sponsor to operate on an starport, providing starnautical services such
+                as bussard ramscoop fueling, storaging, hangaring, tie-down and parking, starship rental, starship maintenance,
+                fleet instruction, etc. </p>
+
+            <p>"Flight long and prosper." Choose Space Flight, you are now free to move about the universe. </p>
+            <div class="service">
+                <div class="service-left">
+                    <h3>Ground Service</h3>
+                    <ul>
+                        <li>Executive passenger lounge</li>
+                        <li>Conference room</li>
+                        <li>Pilot lounge with computer stations</li>
+                        <li>Complimentary WIFI</li>
+                        <li>Weather and flight planning facilities</li>
+                        <li>Courtesy shuttle to terminal and tunnel</li>
+                    </ul>
+                </div>
+                <div class="service-right">
+                    <h3>Spacecraft Services</h3>
+                    <ul>
+                        <li>Refueling services</li>
+                        <li>Baggage handling</li>
+                        <li>Rental of secure hangar and ramp</li>
+                        <li>De-icing</li>
+                        <li>Coffee, ice, and onboard catering available</li>
+                        <li>Maintenance services</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <?php
       include 'fragments/footer.php';
       ?>
 </body>

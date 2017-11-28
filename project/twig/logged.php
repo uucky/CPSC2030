@@ -8,7 +8,10 @@
 </head>
 
 <?php 
+session_start();
+include_once 'login_lib.php';
 include 'fragments/load_twig.php'
+loginCheck();
 ?>
 
 <body>
@@ -19,7 +22,7 @@ include 'fragments/load_twig.php'
     ?>
     <div class="container">
         <h2>Logged</h2>
-        
+        <?php echo $template2->render(array("session_id"=>session_id())); ?>
     </div>
     <?php
         include 'fragments/footer.php';

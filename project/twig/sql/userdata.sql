@@ -1,22 +1,19 @@
 CREATE DATABASE IF NOT EXIST user_db;
 CREATE TABLE IF NOT EXIST login_info (
     user_id int(10) NOT NULL AUTO_INCREMENT,
-    user_name VARCHAR(26) NOT NULL,
-    user_pwd VARCHAR(26) NOT NULL,
-    PRIMARY KEY (user_id)
+    user_name VARCHAR(32) NOT NULL,
+    user_pass VARCHAR(32) NOT NULL,
+    -- PRIMARY KEY (user_id)
 );
-
-INSERT INTO login_info (
-    user text NOT NULL,
-    password text NOT NULL
-)
 
 DELIMITER $$
 
-CREATE DEFINER='root'@'localhost' PROCEDURE 'checkuser' (IN _user text, IN _user text) NO SQL
+CREATE DEFINER='root'@'localhost' PROCEDURE 'checkUser' (IN _user text, IN _user text) NO SQL
 BEGIN
-SELECT user FROM login_info WHERE _user = user AND _pass = pass;
+SELECT user_id FROM login_info WHERE _user = user_name AND _pass = user_pass;
 
 END$$
 
 DELIMITER;
+
+INSERT INTO login_info VALUES (1, 'foobar', 'password');

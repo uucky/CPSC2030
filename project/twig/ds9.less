@@ -1,5 +1,6 @@
 @theme-color: #ffcc00;
-@theme-bg: #17222c;;
+@theme-bg: #17222c;
+;
 @font-face {
   font-family: 'FederationDS9Title';
   src: url('./res/DS9_Title.ttf') format('truetype');
@@ -58,8 +59,7 @@ img {
 h1 {
   /* SPACE FLIGHT: */
   width: 100%;
-  text-align: center; 
-
+  text-align: center;
   display: inline-block;
   padding: 4rem 0;
   margin: 0 auto;
@@ -73,6 +73,7 @@ h1 {
 
 h2 {
   font-size: 2.5em;
+  text-align: center;
 }
 
 .menubar {
@@ -101,8 +102,7 @@ h2 {
         -webkit-transform: skew(-10deg);
         &:hover {
           color: @theme-bg;
-          background-color: @theme-color;
-          // margin-top: -8px;
+          background-color: @theme-color; // margin-top: -8px;
         }
         &:active {
           // margin: 0 1px;
@@ -113,8 +113,7 @@ h2 {
           transform: skew(10deg);
           -o-transform: skew(10deg);
           -moz-transform: skew(10deg);
-          -webkit-transform: skew(10deg);
-          // &:hover {}
+          -webkit-transform: skew(10deg); // &:hover {}
         }
       }
     }
@@ -125,9 +124,7 @@ h2 {
   margin-left: 2em;
   margin-right: 2em;
   padding: 3em 2rem;
-  
-  background-color: rgba(23, 34, 44, 0.9);
-  // border-radius: 10px;
+  background-color: rgba(23, 34, 44, 0.9); // border-radius: 10px;
 }
 
 .service {
@@ -187,8 +184,7 @@ fieldset {
   width: 100%;
   display: grid;
   grid-gap: 1em;
-  grid-template-columns: repeat(auto-fit, minmax(20.5rem, 1fr));
-  // grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20.5rem, 1fr)); // grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
   grid-template-rows: auto;
 }
 
@@ -208,9 +204,14 @@ fieldset {
   font-size: 5rem;
   font-weight: bold;
   color: #CDEDF6;
-
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.login-reg {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
