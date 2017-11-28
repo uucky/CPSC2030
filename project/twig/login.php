@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet/less" type=text/css href="ds9.less">
-    <scrip
-    src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery.js"></script>
-    <title>Space Flight</title>
+    <scrip src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js">
+        </script>
+        <script type="text/javascript" src="//code.jquery.com/jquery.js"></script>
+        <title>Space Flight</title>
 </head>
 
 <?php 
@@ -23,20 +23,21 @@ include 'fragments/load_twig.php'
             <!-- <h2>Welcome to user system</h2> -->
             <div class="login-reg">
                 <form class="reg-box" method="POST" action="reg.php">
-                <h3>Create account</h3>                    
+                    <h3>Create account</h3>
                     username:
-                    <input type="text" name="username">
+                    <input type="text" placeholder="Username" name="username" required>
                     <br> password:
-                    <input type="password" name="password">
+                    <input type="password" placeholder="Password" name="password" required>
                     <br>
                     <input type="submit" value="Sign Up">
                 </form>
+
                 <form class="login-box" method="POST" action="logged.php">
-                <h3>Already have an account? Please login</h3>
+                    <h3>Already have an account? Please login</h3>
                     username:
-                    <input type="text" name="username">
+                    <input type="text" placeholder="Username" name="username" required>
                     <br> password:
-                    <input type="password" name="password">
+                    <input type="password" placeholder="Password" name="password" required>
                     <br>
                     <input type="submit" value="Login">
                 </form>

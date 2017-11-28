@@ -13,10 +13,35 @@ class fetchData {
 
     public function connect()
     {
-        $this->connection = new mysqli("localhost", "foo", NULL, "ds9db");
+        $this->connection = new mysqli("localhost", "foo", null, "ds9db");
         if ($this->connection->connect_error) {
             die("Connection failed: " . $this->connection->connect_error);
         }
+    }
+
+    var $servername = "localhost";
+    var $username = "foo";
+    var $password = null;
+    var $dbname = "ds9db";
+    var $conn;
+    public function getConnSrting () {
+        $con = mysqli_connect($this->servername, $this->username, $this->password, $this->dbname)
+        or die("Connection failed: " . mysqli_connect_error());      
+    }
+
+    if (mysqli_connect_errno()) {
+        printf("Connect failed: %s\n", mysqli_connect_error());
+        exit();
+        } else {
+        $this->conn = $con;
+        }
+        return $this->conn;
+        }
+    }
+
+    public function checkUserExist()
+    {
+        
     }
 
     public function getAllItems()
@@ -28,15 +53,5 @@ class fetchData {
         clearConnection($this->connection);        
         return $query;
     }
-
-    // public function getPokedexByID($queryID)
-    // // for details.php
-    // {
-    //     $queryID = $this->connection->real_escape_string($queryID);
-    //     // escape characters to prevent injection
-    //     $query = $this->connection->query("CALL getDexByID($queryID);");
-    //     clearConnection($this->connection);
-    //     return $query;
-    // }
 }
 ?>
