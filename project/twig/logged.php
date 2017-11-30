@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-
-<head>
-    <meta charset="UTF-8"> 
-    <link rel="stylesheet/less" type=text/css href="ds9.less">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js"></script>
-    <title>Space Flight</title>
-</head>
-
 <?php 
+include 'fragments/load_twig.php';
 session_start();
-include_once 'login_lib.php';
-include 'fragments/load_twig.php'
-loginCheck();
 ?>
 
 <body>
@@ -22,7 +11,16 @@ loginCheck();
     ?>
     <div class="container">
         <h2>Logged</h2>
-        <?php echo $template2->render(array("session_id"=>session_id())); ?>
+        <?php 
+        require 'login_lib.php';
+        $result = loginCheck();  
+        if($result){      
+           $template2 = $twig->load('login.twig');
+           echo $template2->render(array("session_id"=>session_id()));
+        }
+        ?>
+        <br>
+        <a href="login_logout.php">Log out</a><br>
     </div>
     <?php
         include 'fragments/footer.php';

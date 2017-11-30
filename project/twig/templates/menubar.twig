@@ -1,21 +1,16 @@
-<!--
-Menu: Create twig for a menu bar, 
-that accepts 
-- a list of pairs for menu item 
-- and respective links 
-as a parameter -->
-
-<!-- 
-on the PokeDex page, the menu will link to 
-- your 5 favorite Pokémon
-on the Pokémon Card page the menu should contain
-- the main menu
-- a google search for the Pokémon
-- A link to the Pokémon home page -->
 <div class="menubar">
-    <ul>
-        {% for link in menu %}
-          <li><a href="{{link["menuLink"]}}"><span>{{link["menuItem"]}}</span></a></li>
-        {% endfor %}
-    </ul>
+    <div class="hamburger" onclick="ham()">☰ Menu</div>
+          <div class="menu btn16" data-menu="16"></div>
+        <div class="icon"></div>
+    <div class="menus">
+        <ul>
+            {% for link in menu %}
+            <li>
+                <a href="{{link["menuLink"]}}">
+                    <span>{{link["menuItem"]}}</span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
 </div>

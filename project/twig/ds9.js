@@ -4,10 +4,9 @@ function ham() {
 	menus.classList.toggle('open');
 	// console.log('end');
 }
-$('.menu').click (function(){
+$('.menu').click(function () {
 	$(this).toggleClass('open');
-  });
-  
+});
 
 // $(document).ready(function () {
 //     /* handling form validation */

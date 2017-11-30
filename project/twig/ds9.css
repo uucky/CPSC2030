@@ -50,7 +50,7 @@ h1 {
   width: 100%;
   text-align: center;
   display: inline-block;
-  padding: 4rem 0;
+  padding: 3rem 0 2rem 0;
   margin: 0 auto;
   letter-spacing: 0.1em;
   font-size: 4rem;
@@ -60,12 +60,12 @@ h1 {
   font-family: 'FederationDS9Title', Eurpstile, Verdana, sans-serif;
 }
 h2 {
-  font-size: 2.5em;
+  font-size: 2em;
   text-align: center;
 }
 .menubar ul {
   margin: 0;
-  padding: 0;
+  padding: 1rem 0;
   display: flex;
   list-style-type: none;
   justify-content: center;
@@ -96,6 +96,8 @@ h2 {
   color: #997a00;
 }
 .menubar ul li a span {
+  font-size: 0.9em;
+  font-weight: lighter;
   display: inline-block;
   transform: skew(10deg);
   -o-transform: skew(10deg);
@@ -103,10 +105,20 @@ h2 {
   -webkit-transform: skew(10deg);
 }
 .container {
-  margin-left: 2em;
-  margin-right: 2em;
   padding: 3em 2rem;
   background-color: rgba(23, 34, 44, 0.9);
+}
+.centered {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 740px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .service {
   display: flex;
@@ -126,6 +138,9 @@ fieldset {
 fieldset legend {
   font-size: x-large;
 }
+fieldset textarea {
+  width: 100%;
+}
 .card {
   margin-left: 2em;
   margin-top: 1.5em;
@@ -137,22 +152,6 @@ fieldset legend {
 }
 .card p {
   margin-left: 5em;
-}
-@media (max-width: 768px) and (min-width: 470px) {
-  .container {
-    max-width: none;
-    flex-wrap: nowrap;
-  }
-  .menubar ul {
-    flex-direction: column;
-    align-items: center;
-  }
-  .menubar ul a {
-    margin: 2px;
-  }
-  .footer {
-    justify-content: center;
-  }
 }
 .grid-container {
   width: 100%;
@@ -180,8 +179,59 @@ fieldset legend {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.login-reg {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+.alert {
+  color: red;
+  display: none;
+}
+.login-box {
+  text-align: center;
+}
+.hamburger {
+  display: none;
+  font-size: 1.2em;
+  color: #ffcc00;
+}
+.hamburger :hover {
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    background: #17222c;
+  }
+  .menubar ul {
+    flex-direction: column;
+  }
+  .menubar ul li {
+    text-align: center;
+  }
+  .menubar ul li a {
+    border: none;
+  }
+  .menus {
+    display: none;
+  }
+  .open {
+    color: #1363db;
+    display: block;
+  }
+  h1 {
+    padding: 2rem 0 2rem 0;
+    font-size: 2rem;
+  }
+  .container {
+    max-width: none;
+    flex-wrap: nowrap;
+  }
+  .footer {
+    justify-content: center;
+  }
+}
+@media (max-width: 470px) {
+  .service {
+    flex-direction: column;
+  }
+  .hamburger {
+    font-size: 1em;
+  }
 }

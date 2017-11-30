@@ -4,4 +4,4 @@ CREATE TABLE login_info (
     -- PRIMARY KEY (user_id)
 )
 
-INSERT INTO login_info VALUES (1, 'foobar', 'password');
+INSERT INTO login_info VALUES ('admin', 'admin');
