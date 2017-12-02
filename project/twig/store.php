@@ -16,11 +16,16 @@ include 'fragments/load_twig.php'
 
     <?php include 'fragments/back-to-top.php'; ?>
     <div class="promo">
-        <img class="promo-pic" src="res/promo.jpg" alt="promo">
-        <div class="promo-text">NEW ARRIVAL</div>
+        <h2 class="promo-text">NEW ARRIVAL
+        </h2>
     </div>
-
+    <div class="promo-detail">
+        <h3>Merchandise</h3>
+        <p>We have an exciting news for you. You can have your favorite spaceship model now! Every model is made by professionals, 100% percectly presents the original's material. *Not all images show the exact version of the ship, or the correct registry of the version being produced.
+        </p>
+    </div>
     <div class="container">
+
         <?php
         require 'fetch_data.php';
         $data = new fetchData();

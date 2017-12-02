@@ -6,7 +6,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  color: white;
+  color: #CDEDF6;
   font-family: "Avenir", "futura lt light", Helvetica, Arial, sans-serif;
   background-image: url(res/3.jpg);
   background-size: cover;
@@ -114,20 +114,34 @@ h2 {
   justify-content: center;
 }
 .wrapper {
-  width: 100%;
   margin: 0 auto;
   max-width: 740px;
   padding-left: 20px;
   padding-right: 20px;
+}
+.special-word {
+  font-weight: bolder;
+  color: #fffa97;
+  padding: 0 5px;
+  background: #454819;
+  border-radius: 5px;
+  margin: 0 3px;
+  text-shadow: none;
+  white-space: nowrap;
 }
 .service {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+.service div {
+  padding: 0 1em;
+  margin: 1em;
+  background-color: #121a22;
+}
 .footer {
-  color: lightgray;
-  margin: 20px auto;
+  color: #CDEDF6;
+  margin: 6em auto;
   max-width: 768px;
 }
 fieldset {
@@ -141,18 +155,6 @@ fieldset legend {
 fieldset textarea {
   width: 100%;
 }
-.card {
-  margin-left: 2em;
-  margin-top: 1.5em;
-}
-.card img {
-  float: left;
-  width: 4em;
-  height: 4em;
-}
-.card p {
-  margin-left: 5em;
-}
 .grid-container {
   width: 100%;
   display: grid;
@@ -162,22 +164,53 @@ fieldset textarea {
 }
 .box {
   background-color: black;
-  color: #CDEDF6;
+  color: #111;
   border-radius: 1px;
   padding: 20px;
-  font-size: 120%;
 }
-.promo-pic {
-  filter: brightness(60%);
+.box div {
+  background: #ffcc00;
+  margin: 0.1em;
+  padding: 0 1em;
+  display: table;
+}
+.promo {
+  opacity: 0.8;
+  overflow: hidden;
+  background-image: url("res/promo.jpg");
+  min-height: 600px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .promo-text {
-  font-size: 5rem;
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  letter-spacing: 10px;
+  font-size: 2em;
   font-weight: bold;
   color: #CDEDF6;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.promo-detail {
+  color: #ccc;
+  background-color: #111;
+  text-align: center;
+  padding: 50px 80px;
+  text-align: justify;
+}
+.promo-detail h3 {
+  text-align: center;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: white;
 }
 .alert {
   color: red;
@@ -186,13 +219,36 @@ fieldset textarea {
 .login-box {
   text-align: center;
 }
+.history {
+  height: 320px;
+  width: 100%;
+  overflow: scroll;
+  border: solid #ffcc00 1px;
+  overflow-x: hidden;
+}
 .hamburger {
   display: none;
   font-size: 1.2em;
   color: #ffcc00;
 }
-.hamburger :hover {
+.hamburger:hover {
   cursor: pointer;
+}
+.about img {
+  width: 50%;
+  text-align: center;
+}
+.about .card {
+  margin-left: 2em;
+  margin-top: 1.5em;
+}
+.about .card img {
+  float: left;
+  width: 4em;
+  height: 4em;
+}
+.about .card p {
+  margin-left: 5em;
 }
 @media (max-width: 768px) {
   .hamburger {
@@ -212,7 +268,7 @@ fieldset textarea {
     display: none;
   }
   .open {
-    color: #1363db;
+    color: blue;
     display: block;
   }
   h1 {

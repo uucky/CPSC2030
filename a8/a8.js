@@ -1,17 +1,19 @@
+let toggled = false;
 $('nav').click(() => {
-  $(this).toggleClass('rotater');
-  console.log('rotater');
+  // $(this).toggleClass('rotater');
   rotate(10);
+  toggled = !toggled;
 });
+// const num = $(this).querySelectorAll('nav').length;
 
 function rotate(degree) {
-  $('p').animate({
-    deg: degree,
-  }, {
-    step(now, fx) {
-      console.log('rotate');
-      $(this).css('transform', `rotate(${now}}deg)`);
-    },
-  });
+  for (let i = 5; i > 1; i -= 1) {
+    $(`.item${i}`).animate({
+      deg: toggled ? 0 : degree * (i - 1),
+    }, {
+      step(now, fx) {
+        $(this).css('transform', `rotate(${now}deg)`);
+      },
+    });
+  }
 }
-

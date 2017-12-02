@@ -1,25 +1,37 @@
-UPDATE 2017-10-30
-CURRENT TODO:
-CSS change current-menu-item color when change pages SEE https://stackoverflow.com/questions/11418977/parallelogram-navigation-background-with-css
-JS hamburger button
+SQL setup scripts:
+	-Use .sql to store pocedure
 
-DONE:
-1. SQL setup scripts
-    setup the necessary database
-    tables
-    and insert any testing data
-2. Contains at least 6 pages not related to the logon
-3. At least 2 Twig templates for pages
-4. A Small PHP library to generate common components of page: fragments dir
-5. Each page contains navigation to the whole site and a footer
-6. Use LESS style sheets
+setup the necessary database
+	tables
+	and insert any testing data
+		-place order in board, store merchandise information in merchandise
 
-WORKING:e
-7. The page must be responsive, that is it must look good at various resolutions 
-8. Contains a logon system, using SQL as a back end
-11. Contains at least 1 page which using AJAX that pulls data from a SQL back end
+Contains a logon system, using SQL as a back end
+	login in login.php, use admin:admin to login. Every login_xxx.php is the background support files of logon system.
 
+Contains at least 6 pages not related to the logon
+	index, location, order, order_submit, store, about
 
-TODO:
-9. Use jQuery to implement at least 2 non-trivial features
-10. Contain at least 1 jQuery animation: http://webdesignerwall.com/tutorials/animated-scroll-to-top
+Use at least 2 Twig templates for your page
+	yes, see /templates
+
+Use jQuery to implement at least 2 non-trivial features
+	toggle menu, append order information when logged in
+
+Contain at least 1 jQuery animation
+	promo text animation in store
+
+Contains at least 1 page which using AJAX that pulls data from a SQL back end
+	see order information when logged in
+
+A Small PHP library to generate common components of your page
+	see load_twig
+
+Each page must contain navigation to the whole site and a footer
+	yes
+
+You site will use LESS style sheets
+	yes
+
+The page must be responsive, that is it must look good at various resolutions
+	yes, 3 type

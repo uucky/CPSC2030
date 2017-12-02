@@ -18,8 +18,8 @@
                 <p>We are granted the right by the starport sponsor to operate on an starport, providing starnautical services
                     such as bussard ramscoop fueling, storaging, hangaring, tie-down and parking, starship rental, starship
                     maintenance, fleet instruction, etc. </p>
-
-                <p>"Flight long and prosper." Choose Space Flight, you are now free to move about the universe. </p>
+                <p>Other than what the normal spaceship can do, we also offer merchandise of the most advenced and popular spaceship in the universe.</p>
+                <p><span class='special-word'>"Flight long and prosper."</span> Choose Space Flight, you are now free to move about the universe. </p>
                 <div class="service">
                     <div class="service-left">
                         <h3>Ground Service</h3>

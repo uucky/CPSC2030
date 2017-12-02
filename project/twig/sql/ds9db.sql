@@ -44,3 +44,18 @@ INSERT INTO merchandise VALUES (37,'Andorian Cruiser',580);
 INSERT INTO merchandise VALUES (38,'Delta Flyer',590);
 INSERT INTO merchandise VALUES (39,'Romulan Drone',320);
 INSERT INTO merchandise VALUES (40,'Enterprise NCC-1701-B',395);
+
+CREATE TABLE login_info (
+    user_name VARCHAR(32) NOT NULL,
+    user_pass VARCHAR(32) NOT NULL,
+    -- PRIMARY KEY (user_id)
+)
+
+INSERT INTO login_info VALUES ('admin', 'admin');
+
+create table board (
+  name text,
+  model text,
+  address text,
+  comment text
+)

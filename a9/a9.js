@@ -3,7 +3,7 @@ $('.send').click(function () {
 	//send message to php, save message in sql
 	var username = $('.username').val();
 	var message = $('.message').val();
-	if (message == '') {
+	if (message == '' || username == '') {
 		alert('Type some text please.');
 		return false;
 	}
@@ -35,16 +35,19 @@ function update() {
 		success: function (response, status, xhr) {
 			responseObj = JSON.parse(response);			
 			message = '';
-			$('.history').append("<p>【" + responseObj.time + '】' + responseObj.username + ': ' + responseObj.message + "</p>");
+			// $('.history').append("<p>【" + responseObj.time + '】' + responseObj.username + ': ' + responseObj.message + "</p>");
 
 			// setInterval(auto, 1000);
 		}
 	});
 }
 
-function auto() {
-	//print the last message in database
-	let responseObj = JSON.parse(response);			
-	$('.history').append("<p>【" + responseObj.time + '】' + responseObj.username + ': ' + responseObj.message + "</p>");
-}
-// if (latestSentTime > 
+setInterval(function(){
+	$('.history').load('update.php');
+}, 1000);
+
+// function auto() {
+// 	//print the last message in database
+// 	let responseObj = JSON.parse(response);			
+// 	$('.history').append("<p>【" + responseObj.time + '】' + responseObj.username + ': ' + responseObj.message + "</p>");
+// }

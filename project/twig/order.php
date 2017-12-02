@@ -10,39 +10,39 @@ include 'fragments/load_twig.php'
     ?>
         <div class="container">
             <div class="wrapper">
-                <form action="" method="get">
+                <form action="order_submit.php" method="get">
                     <fieldset>
                         <legend>Ordering a Spaceship Model</legend>
                         <p>Your name:
-                            <input type="text" />
+                            <input type="text" name="name">
                         </p>
                         <p>Choose your Spaceship Model
-                            <select>
+                            <select name="model">
                                 <?php
-                        require 'fetch_data.php';
-                        $data = new fetchData();
-                        $data->connect();
-                        // init connection
-                        $allItems = $data->getAllItems();
-                        // call defined public function
-                        
-                        while($row = $allItems->fetch_assoc()){
-                            $issueId = $row["issueId"];
-                            $name = $row["name"];
-                            echo "<option value='$issueId'>[$issueId] $name</option>";
-                       }
-                    ?>
+                                require 'fetch_data.php';
+                                $data = new fetchData();
+                                $data->connect();
+                                // init connection
+                                $allItems = $data->getAllItems();
+                                // call defined public function
+                                
+                                while($row = $allItems->fetch_assoc()){
+                                    $issueId = $row["issueId"];
+                                    $name = $row["name"];
+                                    echo "<option value='$issueId'>[$issueId] $name</option>";
+                                }
+                                ?>
                             </select>
                         </p>
                         <p>Your address:
-                            <input type="text">
+                            <input type="text" name="address">
                         </p>
                         <p>Write a comment:
                             <br />
-                            <textarea></textarea>
+                            <textarea name="comment"></textarea>
                         </p>
                         <p>
-                            <input type="reset" value="reset" />
+                            <!-- <input type="reset" value="reset" /> -->
                             <input type="submit" value="Send" />
                         </p>
                     </fieldset>

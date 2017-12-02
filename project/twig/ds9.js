@@ -1,56 +1,50 @@
-function ham() {
-	// console.log('begin');
-	let menus = document.querySelector('.menus');
-	menus.classList.toggle('open');
-	// console.log('end');
-}
-$('.menu').click(function () {
-	$(this).toggleClass('open');
+// function ham() {
+// 	// console.log('begin');
+// 	let menus = document.querySelector('.menus');
+// 	menus.classList.toggle('open');
+// 	// console.log('end');
+// }
+
+$('.hamburger').click(
+	function() {
+		$('.hamburger').animate({ color: 'gold' });
+	},
+	function() {
+		$('.menus').toggleClass('open', 100);
+	}
+);
+
+$('.promo-text').hover(
+	function() {
+		if (!$(this).hasClass('animated')) {
+			$(this).dequeue().stop().animate({ width: '100%' });
+		}
+	},
+	function() {
+		$(this).addClass('animated').animate({ width: '60%' }, 'normal', 'linear', function() {
+			$(this).removeClass('animated').dequeue();
+		});
+	}
+);
+$('.checkOrder').click(function() {
+	// var model = $('.model').val();
+	// var name = $('.name').val();
+	// var address = $('.address').val();
+	// var comment = $('.comment').val();
+	$.ajax({
+		type: 'POST',
+		url: 'login_check.php',
+		// data: {
+		// 	name: name,
+		// 	model: model,
+		// 	address: address,
+		// 	comment: comment,
+		// },
+		// success: function (response) {
+		// 	let responseObj = JSON.parse(response);			
+		// 	$('.history').append("<p>【" + responseObj.model + '】' + responseObj.name + "</p>");
+		success: function (output){
+			$('.history').html(output);
+		}
+	});
 });
-
-// $(document).ready(function () {
-//     /* handling form validation */
-//     $("#login-form").validate({
-//         rules: {
-//             password: {
-//                 required: true,
-//             },
-//             username: {
-//                 required: true,
-//                 email: true
-//             },
-//         },
-//         messages: {
-//             password: {
-//                 required: "Please enter your password"
-//             },
-//             username: "Please enter your email address",
-//         },
-//         submitHandler: submitForm
-//     });
-// }
-
-// // function submitForm() {
-//     var data = $('.login-box').serialize();
-//     $.ajax({
-//         type: 'POST',
-//         url : 'response.php?action=login',
-//         data: data,
-//         beforeSend: function(){
-//             $('#error').fadeOut();
-//             $('#login-submit').html('sending ...');
-//         },
-//         success: function(response){
-//             if($.trim(response) === "1"){
-//                 console.log('sucess??');
-//                 $("#login-submit").html('Signing in ...');
-//                 setTimeout('window.location.href = "logged.php";' ,2000);
-//             } else {
-//                 $('#error').fadeIn(1000, function(){
-//                     $('#error').html(response).show();
-//                 })
-//             }
-//         }
-//     });
-//     return false;
-// }

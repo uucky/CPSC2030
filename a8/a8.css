@@ -1,6 +1,5 @@
 h1 {
   display: flex;
-  align-items: center;
   justify-content: center;
   background: lightblue;
   height: 200px;
@@ -8,9 +7,15 @@ h1 {
 p {
   margin-top: 50px;
 }
-nav * {
-  position: fixed;
+nav > * {
+  position: absolute;
   width: 200px;
+  transform-origin: left top;
+  text-align: right;
+}
+a {
+  color: unset;
+  text-decoration-color: unset;
 }
 .item5 {
   background: green;
@@ -29,9 +34,4 @@ nav * {
 }
 .item1 {
   background: #4dff4d;
-}
-.rotater {
-  transition: all 150ms ease;
-  transform-origin: left;
-  transform: rotate(20deg);
 }
