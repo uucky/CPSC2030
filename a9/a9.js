@@ -26,24 +26,16 @@ function update() {
 	var username = $('.username').val();
 	var message = $('.message').val();
 	$.ajax({
-		type: 'POST',
-		url: 'show.php',
-		data:{
-			username: username,
-			message: message
-		},
+		type: 'GET',
+		url: 'update.php',
 		success: function (response, status, xhr) {
-			responseObj = JSON.parse(response);			
-			message = '';
-			// $('.history').append("<p>【" + responseObj.time + '】' + responseObj.username + ': ' + responseObj.message + "</p>");
-
-			// setInterval(auto, 1000);
+			console.log(response);
 		}
 	});
 }
 
 setInterval(function(){
-	$('.history').load('update.php');
+	update();
 }, 1000);
 
 // function auto() {
